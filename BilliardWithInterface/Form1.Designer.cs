@@ -33,15 +33,20 @@
             pictureBox1 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             label1 = new Label();
+            pictureHole = new PictureBox();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHole).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(447, 181);
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(100, 100);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(131, 131);
+            pictureBox1.Size = new Size(40, 40);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -63,12 +68,37 @@
             label1.TabIndex = 1;
             label1.Text = "X:";
             // 
+            // pictureHole
+            // 
+            pictureHole.BackgroundImage = (Image)resources.GetObject("pictureHole.BackgroundImage");
+            pictureHole.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureHole.Location = new Point(400, 400);
+            pictureHole.Name = "pictureHole";
+            pictureHole.Size = new Size(60, 60);
+            pictureHole.TabIndex = 2;
+            pictureHole.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.AXE2354__98622;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Location = new Point(709, 250);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(132, 120);
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(1050, 551);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1834, 911);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureHole);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "Form1";
@@ -80,6 +110,8 @@
             MouseMove += Form1_MouseMove;
             MouseUp += Form1_MouseUp;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHole).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -89,5 +121,7 @@
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private Label label1;
+        private PictureBox pictureHole;
+        private PictureBox pictureBox2;
     }
 }
